@@ -1,12 +1,6 @@
 const { Schema, model } = require('mongoose');
 
 const taskSchema = new Schema({
-    // _id: {
-    //     type: Number,
-    //     required: true,
-    //     unique: true,
-    //     autoIncrement: true
-    // },
     title: {
         type: String,
         required: true
@@ -16,11 +10,11 @@ const taskSchema = new Schema({
         type: String,
         required: true
     },
-    timestamp: {
-        type: Date,
-        default: Date.now
-    }
-})
+    // timestamp: {
+    //     type: Date,
+    //     default: Date.now
+    // }
+}, { timestamps: true });
 
 const taskModel = model('Tasks', taskSchema);
 
