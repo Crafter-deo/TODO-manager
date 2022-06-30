@@ -5,14 +5,14 @@ const connect = require('./config/database').connect
 const routes = require('./routes/todoRoutes')
 config()
 connect()
-const PORT = parseInt(process.env.PORT) 
+const PORT = parseInt(process.env.PORT)
 
 
-const app = express() 
+const app = express()
 
 app.use(express.json())
 
-app.use("/", routes) 
+app.use("/", routes)
 
 
 app.listen(PORT, () => {
